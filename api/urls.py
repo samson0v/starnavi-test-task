@@ -25,7 +25,7 @@ urlpatterns = [
     path('', include(router.urls)),
 
     path('likes/<int:pk>/', likes_detail, name='like-detail'),
-    path('analitics/', PostLikeAnalyticsView.as_view(), name='like-analytics'),
+    path('analytics/', PostLikeAnalyticsView.as_view(), name='like-analytics'),
 
     path('users/<int:pk>/', user_detail, name='user-detail'),
     path('users/<int:pk>/user_activity/', user_activity, name='user-activity'),

@@ -18,6 +18,12 @@ class PostLikeAnalyticsView(generics.ListAPIView):
     serializer_class = LikeSerializer
 
     def list(self, request, *args, **kwargs):
+        """
+        Function return analytics about how many likes was made per day in specific range.
+        If day haven't likes, it is pass.
+
+        :return: Response obj
+        """
         output_data = self.filter_queryset(self.queryset).annotate(day=TruncDay('timestamp')).values('day').annotate(
             likes=Count('id')).values('day', 'likes')
 
