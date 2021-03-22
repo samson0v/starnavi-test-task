@@ -30,5 +30,10 @@
 3. **api-token-auth/** - user login by JWT (Authorization: JWT [you_token])
 4. **api-auth/logout** - user logout
 
+**API support 3 types of auth:**
+1. Session Based auth
+2. Basic Django auth
+3. JWT auth
+
 ## Support
 **Feel free to message me on my email about any technical issues!**
